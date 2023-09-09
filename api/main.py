@@ -10,6 +10,6 @@ async def root():
     return {'message': 'Hello World'}
 
 
-@app.get('/{name}')
-async def hello_param(name):
-    return {'message': f'Hello {name}'}
+@app.get('/items/{item_id}')
+async def hello_param(item_id):
+    return {'message': f'Hello id: {item_id}'}
