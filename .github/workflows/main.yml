@@ -81,13 +81,13 @@ jobs:
           name: api
 
       - name: Upload to S3
-        run: aws s3 cp api.zip s3://fast1
+        run: aws s3 cp api.zip s3://fastapi-b
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
       - name: Deploy new Lambda
-        run: aws lambda update-function-code --function-name fastapi --s3-bucket fast1 --s3-key api.zip
+        run: aws lambda update-function-code --function-name fastapi --s3-bucket fastapi-b --s3-key api.zip
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
