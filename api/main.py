@@ -11,5 +11,5 @@ async def root():
 
 
 @app.get('/message')
-async def root():
+async def message():
     return {'message': 'Server api at /message '}
