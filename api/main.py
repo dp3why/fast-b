@@ -10,6 +10,6 @@ async def root():
     return {'message': 'Server is running successfully'}
 
 
-@app.get('/message')
-async def message():
-    return {'message': 'Server api at /message '}
+@app.get('/apitest')
+async def about():
+    return {'message': 'Server api at /apitest '}
