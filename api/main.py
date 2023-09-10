@@ -7,9 +7,9 @@ handler = Mangum(app)
 
 @app.get('/')
 async def root():
-    return {'message': 'Hello World'}
+    return {'message': 'Server is running successfully'}
 
 
-@app.get('/items/{item_id}')
-async def hello_param(item_id):
-    return {'message': f'Hello id: {item_id}'}
+@app.get('/message')
+async def root():
+    return {'message': 'Server api at /message '}
